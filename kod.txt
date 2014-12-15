@@ -109,18 +109,6 @@ void loop() {
           Serial.print(c);
 
            switch (c) {
-            case '2':
-              //add code here to trigger on 2
-              triggerPin(2, client);
-              break;
-            case '3':
-            //add code here to trigger on 3
-              triggerPin(3, client);
-              break;
-            case '4':
-            //add code here to trigger on 4
-              triggerPin(4, client);
-              break;
             case '5':
             //add code here to trigger on 5
               for(pos = 12; pos < 87; pos += 1)  // goes from 0 degrees to 180 degrees 
@@ -133,26 +121,18 @@ void loop() {
               myservo.write(pos);              // tell servo to go to position in variable 'pos' 
               delay(15);
   } 
-              //triggerPin(5, client);
               break;
             case '6':
-            //add code here to trigger on 6
-         
              digitalWrite(6, HIGH);
-            //triggerPin(6, client);
               break;
             case '7':
-            //add code here to trigger on 7
-              digitalWrite(6, HIGH);
-              
+              digitalWrite(6, LOW);
               break;
-            case '8':
-            //add code here to trigger on 
-              triggerPin(8, client);
+            case '8': 
+              digitalWrite(7, HIGH);
               break;
             case '9':
-            //add code here to trigger on 9
-              triggerPin(9, client);
+              digitalWrite(7, LOW);
               break;
           }
 
