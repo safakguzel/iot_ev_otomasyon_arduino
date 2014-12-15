@@ -138,15 +138,13 @@ void loop() {
             case '6':
             //add code here to trigger on 6
          
-             digitalWrite(8, HIGH);
-             
-             delay(2000);
-              triggerPin(6, client);
+             digitalWrite(6, HIGH);
+            //triggerPin(6, client);
               break;
             case '7':
             //add code here to trigger on 7
-
-              triggerPin(7, client);
+              digitalWrite(6, HIGH);
+              
               break;
             case '8':
             //add code here to trigger on 
@@ -180,16 +178,3 @@ void loop() {
   }
 }
 
-void triggerPin(int pin, EthernetClient client){
-//blink a pin - Client needed just for HTML output purposes.  
-  client.print("Turning on pin ");
-  client.println(pin);
-  client.print("<br>");
-
-  
-
-  /*digitalWrite(pin, HIGH);
-  delay(1000);
-  digitalWrite(pin, LOW);
-  delay(25);*/
-}
