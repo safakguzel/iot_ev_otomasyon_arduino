@@ -101,44 +101,6 @@ void loop() {
           break;
         }
         //-----------------------------------------------
-        
-        if(reading && c == ' ') reading = false;
-        if(c == '?') reading = true; //found the ?, begin reading the info
-
-        if(reading){
-          Serial.print(c);
-
-           switch (c) {
-            case '5':
-              for(pos = 12; pos < 87; pos += 1)  // goes from 0 degrees to 180 degrees 
-  {                                  // in steps of 1 degree 
-              myservo.write(pos);              // tell servo to go to position in variable 'pos' 
-              delay(15);
-  }             
-              for(pos = 87; pos >= 12; pos -= 1)  // goes from 0 degrees to 180 degrees 
-  {                                  // in steps of 1 degree 
-              myservo.write(pos);              // tell servo to go to position in variable 'pos' 
-              delay(15);
-  } 
-              break;
-            case '6':
-             digitalWrite(6, HIGH);
-              break;
-            case '7':
-              digitalWrite(6, LOW);
-              break;
-            case '8': 
-              digitalWrite(7, HIGH);
-              break;
-            case '9':
-              digitalWrite(7, LOW);
-              break;
-          }
-
-        }
-
-        
-        //-----------------------------------------------
         if (c == '\n') {
           // you're starting a new line
           currentLineIsBlank = true;
